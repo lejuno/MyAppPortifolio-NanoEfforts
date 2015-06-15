@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Meu Portifólio App - Esforço Nano</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="activity_title">Meus Apps Nanodegre!!!</string>
+    <string name="button01_spotify">Spotify Streamer</string>
+    <string name="button02_scores">Placar App</string>
+    <string name="button03_library">Biblioteca App</string>
+    <string name="button04_buildbigger">Construindo Maior</string>
+    <string name="button05_reader">Leitor XYZ</string>
+    <string name="button06_capstone">Capstone: Meu próprio App</string>
+    <string name="action_about">Sobre</string>
+    <string name="about">Este é o meu primeiro aplicativo para o Nanodegree!! Depois de muito tempo foi divertido lembrar e aprender sobre a programação android.</string>
+    <string name="title_activity_about">About Activity</string>
+</resources>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My App Portifolio - Nano Efforts</string>
+    <string name="action_settings">Settings</string>
+    <string name="activity_title">My Nanodegree Apps!!!</string>
+    <string name="button01_spotify">Spotify Streamer</string>
+    <string name="button02_scores">Scores App</string>
+    <string name="button03_library">Library App</string>
+    <string name="button04_buildbigger">Build it Bigger</string>
+    <string name="button06_capstone">Capstone: My Own App</string>
+    <string name="button05_reader">XYZ Reader</string>
+    <string name="action_about">About</string>
+    <string name="title_activity_about">About Activity</string>
+
+    <string name="about">This is the first application for Nanodegree!!! After long time not programing it was funny to remember and learning android programming.</string>
+</resources>
