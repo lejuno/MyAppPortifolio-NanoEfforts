@@ -1,6 +1,5 @@
 package com.lejuno.myappportifolio_nanoefforts;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -15,20 +14,14 @@ import android.widget.Toast;
 public class PortifolioActivity extends ActionBarActivity {
 
     private String LOG_TAG = "PortfolioActivity";
-    // Buttons 1 to 6 initialization
-    private Button button01;
-    private Button button02;
-    private Button button03;
-    private Button button04;
-    private Button button05;
-    private Button button06;
+
+    private Toast mAppToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(LOG_TAG, "onCreate()");
         setContentView(R.layout.activity_portifolio);
-        initializeButtons();
     }
 
     @Override
@@ -48,10 +41,6 @@ public class PortifolioActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_about) {
             Intent intent = new Intent(this, AboutActivity.class);
             startActivity(intent);
@@ -60,48 +49,28 @@ public class PortifolioActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void initializeButtons() {
-        Log.d(LOG_TAG, "initializeButtons()");
-        button01 = (Button) findViewById(R.id.button01);
-        button01.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "This button will launch " + button01.getText(),Toast.LENGTH_SHORT).show();
+        public void buttonAction(View v) {
+            //Switch based on button ID
+            //Currently they all call displayToast - later they might launch intents
+            switch(v.getId()) {
+                case R.id.button01:
+                case R.id.button02:
+                case R.id.button03:
+                case R.id.button04:
+                case R.id.button05:
+                case R.id.button06:
+                    displayToast("This button will launch " + ((Button)v).getText().toString());
+                    break;
+                default:
+                    break;
             }
-        });
-        button02 = (Button) findViewById(R.id.button02);
-        button02.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "This button will launch " + button02.getText(),Toast.LENGTH_SHORT).show();
-            }
-        });
-        button03 = (Button) findViewById(R.id.button03);
-        button03.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "This button will launch " + button03.getText(), Toast.LENGTH_SHORT).show();
-            }
-        });
-        button04 = (Button) findViewById(R.id.button04);
-        button04.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "This button will launch " + button04.getText(),Toast.LENGTH_SHORT).show();
-            }
-        });
-        button05 = (Button) findViewById(R.id.button05);
-        button05.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "This button will launch " + button05.getText(),Toast.LENGTH_SHORT).show();
-            }
-        });
-        button06 = (Button) findViewById(R.id.button06);
-        button06.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "This button will launch " + button06.getText(),Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
+        }
 
-    public Context getContext() {
-        Log.d(LOG_TAG, "getContext()");
-        return this;
+    private void displayToast(String msg) {
+        if(mAppToast !=null){
+            mAppToast.cancel();
+        }
+        mAppToast = Toast.makeText(this,msg,Toast.LENGTH_SHORT);
+        mAppToast.show();
     }
 }

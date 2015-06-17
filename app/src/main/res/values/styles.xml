@@ -1,5 +1,4 @@
 <resources>
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Set AppCompat’s color theming attrs -->
@@ -7,20 +6,24 @@
         <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
     <!-- The rest of your attributes -->
     </style>
-    <style name="ButtonStyle">
+    <style name="ButtonStyle" parent="android:Widget.Material.Button">
         <item name="android:textColor">#ffffffff</item>
-        <item name="android:background">#ffffad00</item>
-        <item name="android:layout_marginBottom">5dp</item>
-        <item name="android:layout_marginTop">5dp</item>
-    </style>
-    <style name="ButtonStyle2">
-        <item name="android:textColor">#ffffffff</item>
-        <item name="android:background">#ffff2500</item>
+        <item name="android:background">@drawable/raised_button_background</item>
         <item name="android:layout_marginBottom">5dp</item>
         <item name="android:layout_marginTop">5dp</item>
         <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:elevation">5dp</item>
+        <item name="android:textSize">@dimen/textSize</item>
     </style>
-
+    <style name="ButtonStyle2" parent="android:Widget.Material.Button">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:background">@drawable/raised_button_special_background</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:elevation">5dp</item>
+        <item name="android:textSize">@dimen/textSize</item>
+    </style>
     <style name="activityStyle">
         <item name="android:background">@color/ColorBackground</item>
         <item name="android:layout_margin">0dp</item>

@@ -23,9 +23,10 @@
             style="@style/activityStyle"
             android:nestedScrollingEnabled="true"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true">
-
-            <TextView android:text="@string/activity_title" android:layout_width="wrap_content"
+            android:layout_alignParentStart="true"
+            >
+            <TextView android:text="@string/activity_title"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentStart="true"
@@ -43,13 +44,12 @@
                 android:id="@+id/button01"
                 android:layout_below="@+id/textView"
                 android:layout_centerHorizontal="true"
-                android:width="200dp"
-                style="@style/ButtonStyle"
                 android:elegantTextHeight="true"
-                android:clickable="true"
-                android:focusableInTouchMode="true"
-                android:focusable="true"
-                android:longClickable="true" />
+                android:width="@dimen/buttonWidth"
+                android:layout_margin="@dimen/buttonMargin"
+                android:onClick="buttonAction"
+                style="@style/ButtonStyle"
+                />
 
             <Button
                 android:layout_width="wrap_content"
@@ -57,8 +57,11 @@
                 android:text="@string/button02_scores"
                 android:id="@+id/button02"
                 android:layout_below="@+id/button01"
-                android:layout_alignStart="@+id/button01"
-                android:layout_alignEnd="@+id/button01"
+                android:layout_centerHorizontal="true"
+                android:elegantTextHeight="true"
+                android:width="@dimen/buttonWidth"
+                android:layout_margin="@dimen/buttonMargin"
+                android:onClick="buttonAction"
                 style="@style/ButtonStyle"
                 />
 
@@ -68,9 +71,11 @@
                 android:text="@string/button03_library"
                 android:id="@+id/button03"
                 android:layout_below="@+id/button02"
-                android:layout_alignStart="@+id/button02"
-                android:layout_alignEnd="@+id/button02"
-                android:onClick="buttonEvent"
+                android:layout_centerHorizontal="true"
+                android:elegantTextHeight="true"
+                android:width="@dimen/buttonWidth"
+                android:layout_margin="@dimen/buttonMargin"
+                android:onClick="buttonAction"
                 style="@style/ButtonStyle"
                 />
 
@@ -80,8 +85,11 @@
                 android:text="@string/button04_buildbigger"
                 android:id="@+id/button04"
                 android:layout_below="@+id/button03"
-                android:layout_alignStart="@+id/button03"
-                android:layout_alignEnd="@+id/button03"
+                android:layout_centerHorizontal="true"
+                android:elegantTextHeight="true"
+                android:width="@dimen/buttonWidth"
+                android:layout_margin="@dimen/buttonMargin"
+                android:onClick="buttonAction"
                 style="@style/ButtonStyle"
                 />
 
@@ -91,8 +99,11 @@
                 android:text="@string/button05_reader"
                 android:id="@+id/button05"
                 android:layout_below="@+id/button04"
-                android:layout_alignStart="@+id/button04"
-                android:layout_alignEnd="@+id/button04"
+                android:layout_centerHorizontal="true"
+                android:elegantTextHeight="true"
+                android:width="@dimen/buttonWidth"
+                android:layout_margin="@dimen/buttonMargin"
+                android:onClick="buttonAction"
                 style="@style/ButtonStyle"
                 />
 
@@ -102,10 +113,12 @@
                 android:text="@string/button06_capstone"
                 android:id="@+id/button06"
                 android:layout_below="@+id/button05"
-                android:layout_alignStart="@+id/button05"
-                android:layout_alignEnd="@+id/button05"
-                android:focusable="false"
-                style="@style/ButtonStyle2"/>
+                android:layout_centerHorizontal="true"
+                android:width="@dimen/buttonWidth"
+                android:layout_margin="@dimen/buttonMargin"
+                android:onClick="buttonAction"
+                style="@style/ButtonStyle2"
+                />
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>
